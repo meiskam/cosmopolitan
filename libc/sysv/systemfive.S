@@ -337,8 +337,7 @@ _init_systemfive_stack:					# determinism ftw!
 	jc	1f
 	mov	__NR_mmap,%eax
 #endif
-0:	or	MAP_GROWSDOWN,%r10d			# openbsd:mapstack
-	clc
+0:	clc
 	syscall
 	pop	%r9
 	pop	%r9
